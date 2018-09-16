@@ -1,4 +1,28 @@
-<h1>This is your INDEX!</h1>
+<h1>All blog posts</h1>
 
+<p><%= link_to "Create new post", new_post_path %></p>
+
+<table class ="table table-borderless">
+	<thead>
+		<tr>
+			<th scope = "col">Title</th>
+			<th scope = "col">Comments</th>
+			<th scope = "col">Date</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<% @posts.each do |post| %>
+		    <tr> 
+			     <td><%= post.title %></td>
+			     <td><%= post.comments.count %></td>
+			     <td><%= post.created_at.strftime("%b %d, %Y") %></td>
+			     <td><%= link_to 'Edit', edit_post_path(post) %></td>
+			     <td><%= link_to 'View Post', post_path(post) %></td>
+		    </tr>
+
+		<% end %>
+	</tbody>
+</table>
 
 

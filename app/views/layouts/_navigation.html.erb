@@ -1,0 +1,17 @@
+<div class= "navbar navbar-default">
+      <div class= "container">
+        <div class= "navbar-header">
+          <%= link_to "Rails Blog", root_path, class: "navbar-brand" %>
+        </div>
+        
+        <div>  
+          <ul class= "nav navbar-nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Contact", contact_path %></li> 
+          </ul>
+        </div> 
+          
+          <p><%= link_to "Create New Post", new_post_path, class: "navbar-right navbar-text navbar-link" %></p>
+      </div>
+    </div>

@@ -1,2 +1,8 @@
-<h1>Hello from SHOW!</h1>
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+
+
+<%= link_to "Back to posts", posts_path, class: "btn btn-primary" %>
+<%= link_to "Edit", edit_post_path(@post), class: "btn btn-warning" %>
+<%= link_to "Delete", @post, class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
 
