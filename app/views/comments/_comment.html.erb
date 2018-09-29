@@ -1,10 +1,15 @@
 <div class="comment">
-	<p class="comment-content">	
-		<%= comment.comment %>
-	</p>
+	<p class="comment-content"><%= comment.comment %></p>
+	<p class="comment-posted-by">Posted by: <%= comment.user.email %> <%= time_ago_in_words(comment.created_at) %> ago </p>
+
 
 	<div class="links">	
-		<%= link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% if user_signed_in? %>
+			<% if comment.user_id == current_user.id %>
+				<%= link_to 'Edit', edit_post_comment_path(comment.post, comment) %>
+				<%= link_to 'Delete', post_comment_path(comment.post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
+		<% end %>
 	</div>
 	
 </div>

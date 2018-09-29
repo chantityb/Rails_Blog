@@ -21,8 +21,12 @@
 	
 	<div class="article-actions">
 		<%= link_to "Back to posts", posts_path, class: "btn btn-xs btn-primary" %>
-		<%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-xs btn-warning" %>
-		<%= link_to "Delete this post", post_path(@post), class: "btn btn-xs btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+		<% if user_signed_in? %>
+			<% if @post.user_id == current_user.id %>
+				<%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-xs btn-warning" %>
+				<%= link_to "Delete this post", post_path(@post), class: "btn btn-xs btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+			<% end %>
+		<% end %>
 	</div>
 
 </div>
