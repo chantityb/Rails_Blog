@@ -1,3 +1,107 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//Navbar styling
+
+.navbar-default {
+	margin: 0;
+	border-radius: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.navbar-brand {
+	float: left;
+	font-size: 1.7em;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+.navbar-brand.logo {
+		color: #fff;
+}
+
+
+.jumbotron {
+	background-image: asset-url('bg.jpg');
+	height: 400px;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+	border-radius: 0;
+	
+}
+
+
+.jumbotron, h1 {
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+.btn-xl {
+	background-color: #e18c0f;
+	font-size: 1.7em;
+}
+
+#welcome {
+	color: #fff
+}
+
+//new page styling/form
+
+
+
+section .btn-danger {
+	margin-top: -34px;
+	float: right;
+}
+
+//show page styling
+
+.post-date {
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 5px;
+}
+
+.article-actions {
+	border-top: 1px solid #eaeaea;
+	padding-top: 18px;
+}
+
+//index page styling
+
+.article-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.article-body {
+	border-top: 1px solid #eaeaea;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+//footer styling
+
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #d6d6d6;
+	color: #777;
+}
+
+footer a:hoover {
+	color: #222;
+}
+
+footer small {
+	float: left;
+}
+
+footer ul {
+	list-style: none;
+	float: right;
+}
+
+footer ul li {
+	float: left;
+	margin-left: 15px;
+}

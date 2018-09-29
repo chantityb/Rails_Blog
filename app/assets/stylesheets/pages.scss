@@ -1,3 +1,42 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ //about page styling
+
+  /* Marketing Content */
+  
+  .marketing .col-xs-4 {
+  	margin-bottom: 1.5rem;
+  	text-align: center;
+  } /* Center align the text within the three columns */
+
+  .marketing h2 {
+  	font-weight: 400;
+  }
+
+  .marketing .col-xs-4 p {
+  	margin-right: .75rem;
+  	margin-left: .75rem;
+  }
+
+  .col-md-7 {
+  	margin-left: 30px;
+  }
+
+  .col-md-4 {
+  	margin-left: 60px;
+  }
+
+ /* Featurettes */
+ .featurette-divider {
+ 	margin: 5rem 0; /* Spaces out bootstrap <hr> more */
+ }
+
+ .featurette-heading {
+ 	font-weight: 300;
+ 	line-height: 1;
+ 	letter-spacing: -.05rem;
+ }
+
+ .row .featurette {
+ 	margin-top: 150px;
+
+ }
+

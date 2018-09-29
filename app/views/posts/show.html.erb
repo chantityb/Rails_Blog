@@ -1,8 +1,28 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
+<h1 class="text-center"><%= @post.title %></h1>
 
+<div class="well col-xs-8 col-xs-offset-2">
+	
+	<p class="text-right post-date">
+		Posted: <%= @post.created_at.strftime("%b %d, %Y") %>
+		</p>
 
-<%= link_to "Back to posts", posts_path, class: "btn btn-primary" %>
-<%= link_to "Edit", edit_post_path(@post), class: "btn btn-warning" %>
-<%= link_to "Delete", @post, class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+	<p><%= simple_format(@post.content) %></p>
+		
+		<!--commnet section -->
+		<section class="comment">
+			<h4>Comments:</h4>
+			<%= render @post.comments %>
 
+			<hr class="featurette-divider">
+			
+			<h4 class="leave-reply">Leave a reply:</h4>
+			<%= render 'comments/form' %>
+		</section>
+	
+	<div class="article-actions">
+		<%= link_to "Back to posts", posts_path, class: "btn btn-xs btn-primary" %>
+		<%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-xs btn-warning" %>
+		<%= link_to "Delete this post", post_path(@post), class: "btn btn-xs btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+	</div>
+
+</div>

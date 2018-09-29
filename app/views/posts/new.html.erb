@@ -1,5 +1,8 @@
-<div>
-	<h1>New Post</h1>
+<div class="col-md-8 col-md-offset-2">
+	<h1 id='create'>Create a new post</h1>
 	<%= render 'form' %>
-	<%= link_to 'Back to posts', posts_path %>
+	
+	<section class="btn-right">
+		<%= link_to 'Cancel', posts_path, class: "btn btn-danger" %>
+	</section>
 </div>

@@ -1,28 +1,27 @@
-<h1>All blog posts</h1>
+<h1 class="text-center">All blog posts</h1>
 
-<p><%= link_to "Create new post", new_post_path %></p>
 
-<table class ="table table-borderless">
-	<thead>
-		<tr>
-			<th scope = "col">Title</th>
-			<th scope = "col">Comments</th>
-			<th scope = "col">Date</th>
-		</tr>
-	</thead>
+	<% @posts.each do |post| %>
+		<div class="row">
+			<div class="col-xs-8 col-xs-offset-2">    
+			   <div class="well well-lg"> 
+				   <div class="article-title">  
+				     <%= link_to post.title, post_path(post) %>
+				     	
+				   </div>
+
+				   <div class="article-body">  
+				     <%= truncate(post.content, length: 75) %>
+				   </div>
+
+					<div class="article-actions">
+						<%= link_to "Edit this post", edit_post_path(post), class: "btn btn-xs btn-warning" %>
+						<%= link_to "Delete this post", post_path(post), class: "btn btn-xs btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+					</div>
+			    </div>
+			</div>    
+		</div>
+	<% end %>
 	
-	<tbody>
-		<% @posts.each do |post| %>
-		    <tr> 
-			     <td><%= post.title %></td>
-			     <td><%= post.comments.count %></td>
-			     <td><%= post.created_at.strftime("%b %d, %Y") %></td>
-			     <td><%= link_to 'Edit', edit_post_path(post) %></td>
-			     <td><%= link_to 'View Post', post_path(post) %></td>
-		    </tr>
-
-		<% end %>
-	</tbody>
-</table>
 
 
