@@ -1,4 +1,98 @@
- //about page styling
+//Navbar styling
+
+.navbar-default {
+  margin: 0;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.navbar-brand {
+  float: left;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.navbar-brand.logo {
+    color: #fff;
+} 
+
+.navbar-brand.logo:hover {
+  color: #777;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #024ff8;
+}
+
+//home page styling
+
+.jumbotron, h1 {
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.jumbotron {
+  background-image: asset-url('bg.jpg');
+  height: calc(100vh);
+  background-size: 100% 100%;
+  margin-bottom: 0;
+  margin-top: -1px;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+  border-radius: 0;
+  
+}
+
+.btn-xl {
+  background-color: #e18c0f;
+  font-size: 1.7em;
+}
+
+h1.welcome {
+  color: #fff;
+}
+
+//footer styling
+
+#footer-bg {
+  background-color: #000;
+}
+
+footer {
+  padding-top: 5px;
+  border-top: 1px solid #d6d6d6;
+  color: #777;
+}
+
+footer a {
+  color: #024ff8;;
+}
+
+footer a:hover {
+  color: #777;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  list-style: none;
+  float: right;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+//about page styling
 
   /* Marketing Content */
   
@@ -39,4 +133,6 @@
  	margin-top: 150px;
 
  }
+
+
 

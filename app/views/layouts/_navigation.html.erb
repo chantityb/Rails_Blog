@@ -1,22 +1,23 @@
-<div class= "navbar navbar-default">
-      <div class="container">
-        <div class= "navbar-header">
-          <%= link_to "Rails Blog", root_path, class: "navbar-brand logo" %>
-        </div>
-        
-        <div>  
-          <ul class= "nav navbar-nav">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "Posts", posts_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
+<div class="nav navbar-default">
+  <div class="container">
+    <div class= "navbar-header">
+        <%= link_to "Rails Blog", root_path, class: "navbar-brand logo" %>
+   </div>
+    
+    <div>    
+    <ul class="nav navbar-nav">  
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Posts", posts_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+   
             
             <% if !current_user %>
                 <li><%= link_to "Sign Up", new_user_registration_path %></li>
             <% end %>
 
             <% if !current_user %>
-                <li><%= link_to "Login In", new_user_session_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
             <% end %> 
  
 
@@ -28,9 +29,9 @@
           <% if user_signed_in? %>
             <p><%= link_to "Create New Post", new_post_path, class: "navbar-right navbar-text navbar-link" %></p>
           <% end %>
-
-        </div> 
-          
-            
-      </div>
+        
+        </div>
+    
     </div>
+
+</div>

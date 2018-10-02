@@ -1,10 +1,4 @@
-<% if @post.errors.any? %>
-	<% @post.errors.full_messages.each do |msg| %>
- 	<% end %>
-<%  end %>
-
-
-
+<%= render 'shared/alerts' %>
 
 		<%= simple_form_for @post do |f| %>
 		  
